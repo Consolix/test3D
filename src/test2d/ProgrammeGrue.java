@@ -1,4 +1,4 @@
-package testlwjgl;
+package test2d;
 
 import objets.Grue2D;
 

@@ -1,4 +1,4 @@
-package testlwjgl;
+package test2d;
 
 import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_QUADS;

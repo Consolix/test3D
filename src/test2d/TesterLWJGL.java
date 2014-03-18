@@ -1,4 +1,4 @@
-package testlwjgl;
+package test2d;
 
 /*
  * Copyright (c) 2002-2008 LWJGL Project All rights reserved.
