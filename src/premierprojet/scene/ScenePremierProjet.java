@@ -1,5 +1,7 @@
 package premierprojet.scene;
 
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
 import premierprojet.camera.Camera;
@@ -20,11 +22,21 @@ public class ScenePremierProjet {
     
     public void runScene() {
         this.gererLesEvenementsUtilisateurs();
+        this.gererLogiqueDeLaScene();
         this.dessinerLaScene();
     }
     
+    private void gererLogiqueDeLaScene() {
+        // this.camera.setPosition(this.sphere.getPosition());
+    }
+    
     private void gererLesEvenementsUtilisateurs() {
-        this.camera.onMouseEvent();
+        while (Mouse.next()) {
+            this.camera.onMouseEvent();
+        }
+        while (Keyboard.next()) {
+            this.sphere.onKeyEvent();
+        }
     }
     
     private void dessinerLaScene() {

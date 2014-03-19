@@ -54,6 +54,6 @@ public class Map {
     }
     
     public static void MapGlTranslated(double x, double y, double z) {
-        GL11.glTranslated(x * UNITE_MESURE, y * UNITE_MESURE, z * UNITE_MESURE);
+        GL11.glTranslated((x * UNITE_MESURE) + (UNITE_MESURE / 2), (y * UNITE_MESURE) + (UNITE_MESURE / 2), z * UNITE_MESURE);
     }
 }
