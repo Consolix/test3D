@@ -18,7 +18,10 @@ public class Initialisations {
     public static void initialiser3D(String titreProgramme) throws LWJGLException {
         int largeur = 800;
         int hauteur = 600;
-        int fovy = 70;
+        int angleDeVisionDeLaCamera = 70;
+        int distanceMaxAffichageObjet = 1000;
+        int distanceMinAffichageObjet = 1;
+        float ratioDimensionEcran = (float) largeur / hauteur;
         
         Display.setTitle(titreProgramme);
         Display.setDisplayMode(new DisplayMode(largeur, hauteur));
@@ -27,7 +30,8 @@ public class Initialisations {
         
         GL11.glMatrixMode(GL11.GL_PROJECTION);
         GL11.glLoadIdentity();
-        GLU.gluPerspective(fovy, (float) largeur / hauteur, 1, 1000);
+        
+        GLU.gluPerspective(angleDeVisionDeLaCamera, ratioDimensionEcran, distanceMinAffichageObjet, distanceMaxAffichageObjet);
         GL11.glEnable(GL11.GL_DEPTH_TEST);
     }
     
