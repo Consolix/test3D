@@ -27,7 +27,7 @@ public class ScenePremierProjet {
     }
     
     private void gererLogiqueDeLaScene() {
-        // this.camera.setPosition(this.sphere.getPosition());
+        this.camera.setPosition(this.sphere.getPosition().getPositionX(), this.sphere.getPosition().getPositionY() - 5, 10);
     }
     
     private void gererLesEvenementsUtilisateurs() {
@@ -43,11 +43,19 @@ public class ScenePremierProjet {
         GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
         GL11.glMatrixMode(GL11.GL_MODELVIEW);
         GL11.glLoadIdentity();
-        
-        this.camera.lookAt(0, 0, 0);
+        GL11.glPushMatrix();
+        this.camera.lookAt(this.sphere.getPosition().getPositionX(), this.sphere.getPosition().getPositionY(), this.sphere.getPosition()
+                        .getPositionZ());
         this.map.render();
         this.sphere.render();
-        
+        GL11.glPopMatrix();
         GL11.glFlush();
+    }
+    
+    public void dessinerCeQuiNeBougePas() {
+        // GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);
+        // GL11.glMatrixMode(GL11.GL_MODELVIEW);
+        // GL11.glLoadIdentity();
+        //
     }
 }

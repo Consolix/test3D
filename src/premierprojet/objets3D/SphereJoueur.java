@@ -10,7 +10,6 @@ import utils.GLUtils;
 public class SphereJoueur {
     
     private Position position;
-    
     private float taille;
     private Sphere sphere;
     
@@ -19,7 +18,7 @@ public class SphereJoueur {
         this.position.setPositionX(1f);
         this.position.setPositionY(1f);
         this.position.setPositionZ(0f);
-        this.taille = Map.UNITE_MESURE / 2;
+        this.taille = 1;
         this.sphere = new Sphere();
     }
     
@@ -29,7 +28,7 @@ public class SphereJoueur {
     
     public void render() {
         GL11.glPushMatrix();
-        Map.MapGlTranslated(this.position.getPositionX(), this.position.getPositionY(), this.position.getPositionZ() + (this.taille / 2));
+        GL11.glTranslatef(this.position.getPositionX(), this.position.getPositionY(), this.position.getPositionZ());
         GLUtils.glColor3ub(255, 255, 255);
         this.sphere.draw(this.taille, 50, 50);
         GL11.glPopMatrix();

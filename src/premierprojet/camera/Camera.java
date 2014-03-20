@@ -8,15 +8,12 @@ import utils.DessinerRepere;
 
 public class Camera {
     
-    // private float positionX;
-    // private float positionY;
-    // private float positionZ;
     private Position position;
     
     public Camera() {
         this.position = new Position();
         this.position.setPositionX(0);
-        this.position.setPositionY(-3);
+        this.position.setPositionY(-5);
         this.position.setPositionZ(10);
     }
     
@@ -43,7 +40,9 @@ public class Camera {
         }
     }
     
-    public void setPosition(Position position) {
-        this.position = position;
+    public void setPosition(float x, float y, float z) {
+        this.position.setPositionX(x);
+        this.position.setPositionY(y);
+        this.position.setPositionZ(z);
     }
 }

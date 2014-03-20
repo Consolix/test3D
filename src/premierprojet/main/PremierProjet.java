@@ -5,7 +5,6 @@ import org.lwjgl.Sys;
 import org.lwjgl.opengl.Display;
 
 import premierprojet.scene.ScenePremierProjet;
-
 import utils.Initialisations;
 
 public class PremierProjet {
@@ -28,6 +27,7 @@ public class PremierProjet {
     
     private static void run() throws InterruptedException {
         ScenePremierProjet scene = new ScenePremierProjet();
+        scene.dessinerCeQuiNeBougePas();
         while (!Display.isCloseRequested()) {
             Display.update();
             Display.sync(FRAMERATE);
