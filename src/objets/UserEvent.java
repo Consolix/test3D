@@ -4,7 +4,8 @@ import org.lwjgl.input.Mouse;
 
 public class UserEvent {
     private TrackBallCamera camera;
-    private Terre planete;
+    @SuppressWarnings("unused")
+	private Terre planete;
     
     public UserEvent(TrackBallCamera camera, Terre planete) {
         this.camera = camera;
