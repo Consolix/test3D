@@ -27,7 +27,7 @@ public class ScenePremierProjet {
     }
     
     private void gererLogiqueDeLaScene() {
-        this.camera.setPosition(this.sphere.getPosition().getPositionX(), this.sphere.getPosition().getPositionY() - 5, 10);
+        
     }
     
     private void gererLesEvenementsUtilisateurs() {
